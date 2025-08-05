@@ -1,69 +1,114 @@
-/* App.css */
+/* frontend/src/App.css */
 body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
   margin: 0;
   padding: 0;
-  background: #f3f4f6;
-  font-family: 'Segoe UI', sans-serif;
 }
 
-.container {
-  max-width: 600px;
-  margin: 5rem auto;
-  padding: 2rem;
-  background: #fff;
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.todo-box {
+  background: white;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.todo-box h2 {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 1rem;
-  color: #007acc;
-}
-
-.input-wrapper {
+.input-section {
   display: flex;
   gap: 10px;
-  margin-bottom: 2rem;
-  justify-content: center;
+  margin-bottom: 20px;
 }
 
-input {
-  padding: 10px;
+.input-section input {
   flex: 1;
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 6px;
 }
 
-button {
-  background-color: #007acc;
+.input-section button {
+  padding: 10px 16px;
+  background: #007bff;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #005f99;
+.input-section button:hover {
+  background: #0056b3;
 }
 
 .todo-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.todo-list li {
+.todo-item {
   background: #f9f9f9;
-  padding: 12px 20px;
+  padding: 12px 16px;
   margin-bottom: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.todo-list li span {
-  flex: 1;
-  text-align: left;
+.todo-item input.edit-input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.todo-item button {
+  margin-left: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.todo-item .edit-btn {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.todo-item .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.todo-item .save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.todo-item button:hover {
+  opacity: 0.9;
+}
+
+.todo-item input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: gray;
 }
